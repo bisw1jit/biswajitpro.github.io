@@ -1,0 +1,411 @@
+html {
+    height: 100%;
+    width 100%;
+    background-image: url("../img/grid.png");
+}
+
+.centerBlock {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gradientBG {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: red; /* For browsers that do not support gradients */
+    /*background: linear-gradient(180deg, #001F38, #526079, #9A7E8E, #E3757F, #FD997F, #FFD0AA);*/
+    background: linear-gradient(180deg, #4900FF, #9600FF, #FF00C1, #00B8FF, #00FFF9);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease-in-out infinite alternate;
+}
+
+main {
+    background-image: url("../img/grid.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 50% 50%;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
+}
+.glitch {
+  position: relative;
+  font-size: 4em;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(73px, 9999px, 68px, 0);
+    transform: skew(0.19deg);
+  }
+  5% {
+    clip: rect(16px, 9999px, 96px, 0);
+    transform: skew(0.29deg);
+  }
+  10% {
+    clip: rect(47px, 9999px, 54px, 0);
+    transform: skew(0.87deg);
+  }
+  15% {
+    clip: rect(39px, 9999px, 2px, 0);
+    transform: skew(0.59deg);
+  }
+  20% {
+    clip: rect(59px, 9999px, 32px, 0);
+    transform: skew(0.45deg);
+  }
+  25% {
+    clip: rect(65px, 9999px, 40px, 0);
+    transform: skew(0.43deg);
+  }
+  30% {
+    clip: rect(15px, 9999px, 36px, 0);
+    transform: skew(0.45deg);
+  }
+  35% {
+    clip: rect(37px, 9999px, 58px, 0);
+    transform: skew(0.13deg);
+  }
+  40% {
+    clip: rect(15px, 9999px, 43px, 0);
+    transform: skew(0.01deg);
+  }
+  45% {
+    clip: rect(70px, 9999px, 31px, 0);
+    transform: skew(0.39deg);
+  }
+  50% {
+    clip: rect(66px, 9999px, 52px, 0);
+    transform: skew(0.35deg);
+  }
+  55% {
+    clip: rect(81px, 9999px, 13px, 0);
+    transform: skew(0.01deg);
+  }
+  60% {
+    clip: rect(72px, 9999px, 3px, 0);
+    transform: skew(0.58deg);
+  }
+  65% {
+    clip: rect(2px, 9999px, 22px, 0);
+    transform: skew(0.27deg);
+  }
+  70% {
+    clip: rect(29px, 9999px, 84px, 0);
+    transform: skew(0.19deg);
+  }
+  75% {
+    clip: rect(49px, 9999px, 30px, 0);
+    transform: skew(0.76deg);
+  }
+  80% {
+    clip: rect(17px, 9999px, 28px, 0);
+    transform: skew(0.88deg);
+  }
+  85% {
+    clip: rect(50px, 9999px, 37px, 0);
+    transform: skew(0.13deg);
+  }
+  90% {
+    clip: rect(91px, 9999px, 65px, 0);
+    transform: skew(0.07deg);
+  }
+  95% {
+    clip: rect(89px, 9999px, 97px, 0);
+    transform: skew(0.75deg);
+  }
+  100% {
+    clip: rect(76px, 9999px, 81px, 0);
+    transform: skew(0.66deg);
+  }
+}
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(96px, 9999px, 78px, 0);
+    transform: skew(0.54deg);
+  }
+  5% {
+    clip: rect(26px, 9999px, 84px, 0);
+    transform: skew(0.58deg);
+  }
+  10% {
+    clip: rect(45px, 9999px, 67px, 0);
+    transform: skew(0.04deg);
+  }
+  15% {
+    clip: rect(73px, 9999px, 12px, 0);
+    transform: skew(0.3deg);
+  }
+  20% {
+    clip: rect(5px, 9999px, 75px, 0);
+    transform: skew(0.81deg);
+  }
+  25% {
+    clip: rect(78px, 9999px, 36px, 0);
+    transform: skew(0.32deg);
+  }
+  30% {
+    clip: rect(74px, 9999px, 22px, 0);
+    transform: skew(0.29deg);
+  }
+  35% {
+    clip: rect(96px, 9999px, 8px, 0);
+    transform: skew(0.68deg);
+  }
+  40% {
+    clip: rect(73px, 9999px, 7px, 0);
+    transform: skew(0.65deg);
+  }
+  45% {
+    clip: rect(72px, 9999px, 50px, 0);
+    transform: skew(0.84deg);
+  }
+  50% {
+    clip: rect(2px, 9999px, 14px, 0);
+    transform: skew(0.58deg);
+  }
+  55% {
+    clip: rect(27px, 9999px, 89px, 0);
+    transform: skew(0.03deg);
+  }
+  60% {
+    clip: rect(17px, 9999px, 89px, 0);
+    transform: skew(0.76deg);
+  }
+  65% {
+    clip: rect(18px, 9999px, 89px, 0);
+    transform: skew(0.11deg);
+  }
+  70% {
+    clip: rect(66px, 9999px, 21px, 0);
+    transform: skew(0.78deg);
+  }
+  75% {
+    clip: rect(47px, 9999px, 14px, 0);
+    transform: skew(0.03deg);
+  }
+  80% {
+    clip: rect(7px, 9999px, 56px, 0);
+    transform: skew(0.74deg);
+  }
+  85% {
+    clip: rect(18px, 9999px, 56px, 0);
+    transform: skew(0.04deg);
+  }
+  90% {
+    clip: rect(47px, 9999px, 69px, 0);
+    transform: skew(0.96deg);
+  }
+  95% {
+    clip: rect(50px, 9999px, 40px, 0);
+    transform: skew(0.26deg);
+  }
+  100% {
+    clip: rect(11px, 9999px, 31px, 0);
+    transform: skew(0.4deg);
+  }
+}
+@keyframes glitch-skew {
+  0% {
+    transform: skew(3deg);
+  }
+  10% {
+    transform: skew(1deg);
+  }
+  20% {
+    transform: skew(-4deg);
+  }
+  30% {
+    transform: skew(5deg);
+  }
+  40% {
+    transform: skew(0deg);
+  }
+  50% {
+    transform: skew(1deg);
+  }
+  60% {
+    transform: skew(5deg);
+  }
+  70% {
+    transform: skew(5deg);
+  }
+  80% {
+    transform: skew(-1deg);
+  }
+  90% {
+    transform: skew(4deg);
+  }
+  100% {
+    transform: skew(-1deg);
+  }
+}
+
+/*----------------------Center Div Vertically----------------------*/
+.table {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.tableCellWrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    opacity: 1;
+}
+
+/*----------------------Format Image of Me in Main----------------------*/
+#meImageHolder {
+    width: 25%;
+}
+
+#meImageHolder>img {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#meImageHolder>hr {
+    height: 1px;
+    margin: 1em 0;
+    background-color: black;
+    border: 0;
+}
+
+/*----------------------Format Description of Me----------------------*/
+#descriptionOfMe {
+    width: 50%;
+    text-align: center;
+}
+
+#descriptionOfMe>h1 {
+    font-weight: normal;
+    font-size: calc(1px + 3vw);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#descriptionOfMe>p {
+    margin: 2% 0%;
+    font-size: calc(12px + 1vw);
+    font-family: 'Raleway', sans-serif
+}
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    0% { width: 0 }
+    100% { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fffb96; }
+}
+
+/*----------------------Social Media Links----------------------*/
+#socialMediaLinks {
+    margin-bottom: 2%;
+}
+
+#socialMediaLinks>a:link {
+    color: black;
+    margin: 0% 1%;
+}
+
+#socialMediaLinks>a:visited {
+    color: black;
+}
+
+#socialMediaLinks>a:hover {
+    color: white; 
+}
+
+#socialMediaLinks>a:active {
+    color: black;
+}
+
+#socialMediaLinks>a>i {
+    font-size: calc(20px + 2vw);
+}
+
+/*----------------------Link to Resume----------------------*/
+#resumeLink:link {
+    color:black;
+}
+
+#resumeLink:visited {
+    color:black;
+}
+
+#resumeLink:hover {
+    color:white;
+}
+
+#resumeLink:active {
+    color:black
+}
+
+#resumeButton {
+    display: inline-block;
+    color:inherit;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2%;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#resumeButton > p {
+    font-size: calc(12px + 1vw);
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-family: 'Raleway', sans-serif;
+}
+
